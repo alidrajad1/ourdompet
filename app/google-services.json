@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95920736264",
+    "project_id": "our-dompet",
+    "storage_bucket": "our-dompet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95920736264:android:7c8114004da928962e29bd",
+        "android_client_info": {
+          "package_name": "com.example.ourdompet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiVvzOKfsiKf2PkLEC0AMmZeAUjE9QLQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
