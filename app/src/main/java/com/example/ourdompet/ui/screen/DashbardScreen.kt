@@ -24,7 +24,8 @@ import java.util.Locale
 @Composable
 fun DashboardScreen(
     viewModel: HomeViewModel = viewModel(),
-    onNavigateToAdd: () -> Unit
+    onNavigateToAdd: () -> Unit,
+    onExportPdf: () -> Unit
 ) {
     Scaffold(
         floatingActionButton = {
@@ -51,6 +52,20 @@ fun DashboardScreen(
             )
 
             Spacer(modifier = Modifier.height(24.dp))
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Button(
+                    onClick = onExportPdf,
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary
+                    ),
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+                ) {
+                    Text("Export PDF", fontSize = 14.sp)
+                }
+            }
             Text("Riwayat Transaksi", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             Spacer(modifier = Modifier.height(8.dp))
 

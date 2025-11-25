@@ -26,6 +26,7 @@ import com.example.ourdompet.ui.screen.AddTransactionScreen
 import com.example.ourdompet.ui.screen.DashboardScreen
 import com.example.ourdompet.ui.screen.NotesListScreen
 import com.example.ourdompet.ui.screen.AddEditNoteScreen
+import com.example.ourdompet.ui.screen.ExportPdfScreen
 import com.example.ourdompet.ui.theme.OurDompetTheme
 import com.example.ourdompet.viewmodel.NotesViewModel
 
@@ -120,9 +121,16 @@ class MainActivity : ComponentActivity() {
                             }
                         ) {
                             DashboardScreen(
-                                onNavigateToAdd = { navController.navigate("add_transaction") }
+                                onNavigateToAdd = { navController.navigate("add_transaction") },
+                                onExportPdf = { navController.navigate("export_pdf")}
                             )
                         }
+                        composable("export_pdf") {
+                            ExportPdfScreen(
+                                onBack = { navController.popBackStack() }
+                            )
+                        }
+
 
                         // --- ADD TRANSACTION ---
                         composable("add_transaction") {
